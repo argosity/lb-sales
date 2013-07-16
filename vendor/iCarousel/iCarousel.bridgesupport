@@ -1,0 +1,493 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum value='6' name='iCarouselOptionAngle'/>
+<enum value='5' name='iCarouselOptionArc'/>
+<enum value='4' name='iCarouselOptionCount'/>
+<enum value='11' name='iCarouselOptionFadeMax'/>
+<enum value='10' name='iCarouselOptionFadeMin'/>
+<enum value='12' name='iCarouselOptionFadeRange'/>
+<enum value='2' name='iCarouselOptionOffsetMultiplier'/>
+<enum value='7' name='iCarouselOptionRadius'/>
+<enum value='1' name='iCarouselOptionShowBackfaces'/>
+<enum value='9' name='iCarouselOptionSpacing'/>
+<enum value='8' name='iCarouselOptionTilt'/>
+<enum value='3' name='iCarouselOptionVisibleItems'/>
+<enum value='0' name='iCarouselOptionWrap'/>
+<enum value='7' name='iCarouselTypeCoverFlow'/>
+<enum value='8' name='iCarouselTypeCoverFlow2'/>
+<enum value='11' name='iCarouselTypeCustom'/>
+<enum value='3' name='iCarouselTypeCylinder'/>
+<enum value='4' name='iCarouselTypeInvertedCylinder'/>
+<enum value='2' name='iCarouselTypeInvertedRotary'/>
+<enum value='10' name='iCarouselTypeInvertedTimeMachine'/>
+<enum value='6' name='iCarouselTypeInvertedWheel'/>
+<enum value='0' name='iCarouselTypeLinear'/>
+<enum value='1' name='iCarouselTypeRotary'/>
+<enum value='9' name='iCarouselTypeTimeMachine'/>
+<enum value='5' name='iCarouselTypeWheel'/>
+<class name='NSObject'>
+<method selector='carousel:didSelectItemAtIndex:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='NSInteger' name='index' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carousel:itemAlphaForOffset:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='f' declared_type='CGFloat' name='offset' index='1'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='carousel:itemTransformForOffset:baseTransform:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='f' declared_type='CGFloat' name='offset' index='1'/>
+<arg type='{CATransform3D=ffffffffffffffff}' declared_type='CATransform3D' name='transform' index='2'/>
+<retval type='{CATransform3D=ffffffffffffffff}' declared_type='CATransform3D'/>
+</method>
+<method selector='carousel:placeholderViewAtIndex:reusingView:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='I' declared_type='NSUInteger' name='index' index='1'/>
+<arg type='@' declared_type='UIView*' name='view' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='carousel:shouldSelectItemAtIndex:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='NSInteger' name='index' index='1'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='carousel:valueForOption:withDefault:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='iCarouselOption' name='option' index='1'/>
+<arg type='f' declared_type='CGFloat' name='value' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='carousel:valueForTransformOption:withDefault:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='iCarouselOption' name='option' index='1'/>
+<arg type='f' declared_type='CGFloat' name='value' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='carousel:viewForItemAtIndex:reusingView:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='I' declared_type='NSUInteger' name='index' index='1'/>
+<arg type='@' declared_type='UIView*' name='view' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='carouselCurrentItemIndexDidChange:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselCurrentItemIndexUpdated:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselDidEndDecelerating:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselDidEndDragging:willDecelerate:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='B' declared_type='BOOL' name='decelerate' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselDidEndScrollingAnimation:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselDidScroll:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselItemWidth:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='carouselOffsetMultiplier:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='carouselShouldWrap:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='carouselWillBeginDecelerating:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselWillBeginDragging:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='carouselWillBeginScrollingAnimation:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='numberOfItemsInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='numberOfPlaceholdersInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method selector='numberOfVisibleItemsInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+</class>
+<class name='iCarousel'>
+<method selector='bounceDistance'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='bounces'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='centerItemWhenSelected'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='contentOffset'>
+<retval type='{CGSize=ff}' declared_type='CGSize'/>
+</method>
+<method selector='contentView'>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='currentItemIndex'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='currentItemView'>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='dataSource'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='decelerationRate'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='delegate'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='ignorePerpendicularSwipes'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='indexOfItemView:'>
+<arg type='@' declared_type='UIView*' name='view' index='0'/>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='indexOfItemViewOrSubview:'>
+<arg type='@' declared_type='UIView*' name='view' index='0'/>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='indexesForVisibleItems'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='insertItemAtIndex:animated:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<arg type='B' declared_type='BOOL' name='animated' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='isDecelerating'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isDragging'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isScrollEnabled'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isScrolling'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isVertical'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isWrapEnabled'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='itemViewAtIndex:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method selector='itemWidth'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='numberOfItems'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='numberOfPlaceholders'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='numberOfVisibleItems'>
+<retval type='i' declared_type='NSInteger'/>
+</method>
+<method selector='offsetForItemAtIndex:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='offsetMultiplier'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='perspective'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='reloadData'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='reloadItemAtIndex:animated:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<arg type='B' declared_type='BOOL' name='animated' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='removeItemAtIndex:animated:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<arg type='B' declared_type='BOOL' name='animated' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollByNumberOfItems:duration:'>
+<arg type='i' declared_type='NSInteger' name='itemCount' index='0'/>
+<arg type='d' declared_type='NSTimeInterval' name='duration' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollByOffset:duration:'>
+<arg type='f' declared_type='CGFloat' name='offset' index='0'/>
+<arg type='d' declared_type='NSTimeInterval' name='duration' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollOffset'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='scrollSpeed'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='scrollToItemAtIndex:animated:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<arg type='B' declared_type='BOOL' name='animated' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollToItemAtIndex:duration:'>
+<arg type='i' declared_type='NSInteger' name='index' index='0'/>
+<arg type='d' declared_type='NSTimeInterval' name='duration' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollToItemBoundary'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='scrollToOffset:duration:'>
+<arg type='f' declared_type='CGFloat' name='offset' index='0'/>
+<arg type='d' declared_type='NSTimeInterval' name='duration' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBounceDistance:'>
+<arg type='f' declared_type='CGFloat' name='bounceDistance' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBounces:'>
+<arg type='B' declared_type='BOOL' name='bounces' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCenterItemWhenSelected:'>
+<arg type='B' declared_type='BOOL' name='centerItemWhenSelected' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContentOffset:'>
+<arg type='{CGSize=ff}' declared_type='CGSize' name='contentOffset' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContentView:'>
+<arg type='@' declared_type='UIView*' name='contentView' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCurrentItemIndex:'>
+<arg type='i' declared_type='NSInteger' name='currentItemIndex' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setCurrentItemView:'>
+<arg type='@' declared_type='UIView*' name='currentItemView' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDataSource:'>
+<arg type='@' declared_type='id' name='dataSource' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDecelerationRate:'>
+<arg type='f' declared_type='CGFloat' name='decelerationRate' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDelegate:'>
+<arg type='@' declared_type='id' name='delegate' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setIgnorePerpendicularSwipes:'>
+<arg type='B' declared_type='BOOL' name='ignorePerpendicularSwipes' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setIndexesForVisibleItems:'>
+<arg type='@' declared_type='NSArray*' name='indexesForVisibleItems' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setPerspective:'>
+<arg type='f' declared_type='CGFloat' name='perspective' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setScrollEnabled:'>
+<arg type='B' declared_type='BOOL' name='scrollEnabled' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setScrollOffset:'>
+<arg type='f' declared_type='CGFloat' name='scrollOffset' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setScrollSpeed:'>
+<arg type='f' declared_type='CGFloat' name='scrollSpeed' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setScrollToItemBoundary:'>
+<arg type='B' declared_type='BOOL' name='scrollToItemBoundary' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setStopAtItemBoundary:'>
+<arg type='B' declared_type='BOOL' name='stopAtItemBoundary' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setType:'>
+<arg type='i' declared_type='iCarouselType' name='type' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setVertical:'>
+<arg type='B' declared_type='BOOL' name='vertical' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setViewpointOffset:'>
+<arg type='{CGSize=ff}' declared_type='CGSize' name='viewpointOffset' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setVisibleItemViews:'>
+<arg type='@' declared_type='NSArray*' name='visibleItemViews' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='stopAtItemBoundary'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='toggle'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='type'>
+<retval type='i' declared_type='iCarouselType'/>
+</method>
+<method selector='viewpointOffset'>
+<retval type='{CGSize=ff}' declared_type='CGSize'/>
+</method>
+<method selector='visibleItemViews'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+</class>
+<informal_protocol name='iCarouselDataSource'>
+<method type='@20@0:4@8I12@16' selector='carousel:placeholderViewAtIndex:reusingView:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='I' declared_type='NSUInteger' name='index' index='1'/>
+<arg type='@' declared_type='UIView*' name='view' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method type='@20@0:4@8I12@16' selector='carousel:viewForItemAtIndex:reusingView:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='I' declared_type='NSUInteger' name='index' index='1'/>
+<arg type='@' declared_type='UIView*' name='view' index='2'/>
+<retval type='@' declared_type='UIView*'/>
+</method>
+<method type='I12@0:4@8' selector='numberOfItemsInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+<method type='I12@0:4@8' selector='numberOfPlaceholdersInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+</informal_protocol>
+<informal_protocol name='iCarouselDelegate'>
+<method type='v16@0:4@8i12' selector='carousel:didSelectItemAtIndex:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='NSInteger' name='index' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='{CATransform3D=ffffffffffffffff}80@0:4@8f12{CATransform3D=ffffffffffffffff}16' selector='carousel:itemTransformForOffset:baseTransform:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='f' declared_type='CGFloat' name='offset' index='1'/>
+<arg type='{CATransform3D=ffffffffffffffff}' declared_type='CATransform3D' name='transform' index='2'/>
+<retval type='{CATransform3D=ffffffffffffffff}' declared_type='CATransform3D'/>
+</method>
+<method type='B16@0:4@8i12' selector='carousel:shouldSelectItemAtIndex:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='NSInteger' name='index' index='1'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='f20@0:4@8i12f16' selector='carousel:valueForOption:withDefault:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='iCarouselOption' name='option' index='1'/>
+<arg type='f' declared_type='CGFloat' name='value' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='v12@0:4@8' selector='carouselCurrentItemIndexDidChange:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='carouselDidEndDecelerating:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4@8B12' selector='carouselDidEndDragging:willDecelerate:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='B' declared_type='BOOL' name='decelerate' index='1'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='carouselDidEndScrollingAnimation:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='carouselDidScroll:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='f12@0:4@8' selector='carouselItemWidth:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='v12@0:4@8' selector='carouselWillBeginDecelerating:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='carouselWillBeginDragging:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='carouselWillBeginScrollingAnimation:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+<informal_protocol name='iCarouselDeprecated'>
+<method type='f16@0:4@8f12' selector='carousel:itemAlphaForOffset:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='f' declared_type='CGFloat' name='offset' index='1'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='f20@0:4@8i12f16' selector='carousel:valueForTransformOption:withDefault:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<arg type='i' declared_type='iCarouselOption' name='option' index='1'/>
+<arg type='f' declared_type='CGFloat' name='value' index='2'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='v12@0:4@8' selector='carouselCurrentItemIndexUpdated:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='f12@0:4@8' selector='carouselOffsetMultiplier:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method type='B12@0:4@8' selector='carouselShouldWrap:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='I12@0:4@8' selector='numberOfVisibleItemsInCarousel:'>
+<arg type='@' declared_type='iCarousel*' name='carousel' index='0'/>
+<retval type='I' declared_type='NSUInteger'/>
+</method>
+</informal_protocol>
+</signatures>

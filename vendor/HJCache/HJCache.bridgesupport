@@ -1,0 +1,551 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='stateFailed' value='4'/>
+<enum name='stateLoaded' value='2'/>
+<enum name='stateLoading' value='1'/>
+<enum name='stateNew' value='0'/>
+<enum name='stateReady' value='3'/>
+<class name='HJCircularBuffer'>
+<method selector='addObject:'>
+<arg declared_type='id' type='@' index='0' name='obj'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='allObjects'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='bufferWithCapacity:'>
+<arg declared_type='int' type='i' index='0' name='capacity'/>
+<retval declared_type='HJCircularBuffer*' type='@'/>
+</method>
+<method selector='findIndexOfObject:'>
+<arg declared_type='id' type='@' index='0' name='key'/>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='findObject:'>
+<arg declared_type='id' type='@' index='0' name='key'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCapacity:'>
+<arg declared_type='int' type='i' index='0' name='capacity'/>
+<retval declared_type='HJCircularBuffer*' type='@'/>
+</method>
+<method selector='length'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg declared_type='int' type='i' index='0' name='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type='id' type='@' index='0' name='key'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeObjectAtIndex:'>
+<arg declared_type='int' type='i' index='0' name='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='swapObject:atIndex:'>
+<arg declared_type='NSObject*' type='@' index='0' name='obj'/>
+<arg declared_type='int' type='i' index='1' name='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='HJMOBigFileCache'>
+<method selector='lastTrimDate'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='lastTrimDirNum'>
+<retval declared_type='NSNumber*' type='@'/>
+</method>
+<method selector='setLastTrimDate:'>
+<arg declared_type='NSDate*' type='@' index='0' name='lastTrimDate'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLastTrimDirNum:'>
+<arg declared_type='NSNumber*' type='@' index='0' name='lastTrimDirNum'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HJMOFileCache'>
+<method selector='byteCount'>
+<retval declared_type='long long' type='q'/>
+</method>
+<method selector='createCacheDirsIfNeeded'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='deleteAllFilesInDir:'>
+<arg declared_type='NSString*' type='@' index='0' name='path'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='emptyCache'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fileAgeLimit'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+<method selector='fileCount'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='fileCountLimit'>
+<retval declared_type='long' type='l'/>
+</method>
+<method selector='filenameForOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='initWithRootPath:'>
+<arg declared_type='NSString*' type='@' index='0' name='root'/>
+<retval declared_type='HJMOFileCache*' type='@'/>
+</method>
+<method selector='initWithRootPath:isCounting:fileCountLimit:fileAgeLimit:'>
+<arg declared_type='NSString*' type='@' index='0' name='root'/>
+<arg declared_type='BOOL' type='B' index='1' name='isCounting'/>
+<arg declared_type='long' type='l' index='2' name='countLimit'/>
+<arg declared_type='NSTimeInterval' type='d' index='3' name='ageLimit'/>
+<retval declared_type='HJMOFileCache*' type='@'/>
+</method>
+<method selector='loadCounts'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadingFilePathForOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='loadingFinishedForOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='maintenanceThread'>
+<retval declared_type='NSThread*' type='@'/>
+</method>
+<method selector='readyFilePathForOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='removeOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='saveCounts'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setByteCount:'>
+<arg declared_type='long long' type='q' index='0' name='byteCount'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFileAgeLimit:'>
+<arg declared_type='NSTimeInterval' type='d' index='0' name='fileAgeLimit'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFileCount:'>
+<arg declared_type='long' type='l' index='0' name='fileCount'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFileCountLimit:'>
+<arg declared_type='long' type='l' index='0' name='fileCountLimit'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaintenanceThread:'>
+<arg declared_type='NSThread*' type='@' index='0' name='maintenanceThread'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trimCache'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trimCacheDir:'>
+<arg declared_type='NSString*' type='@' index='0' name='cachePath'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='trimCacheUsingBackgroundThread'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HJMOHandler'>
+<method selector='activateHandlerForUser:'>
+<arg declared_type='id' type='@' index='0' name='user'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='addUser:'>
+<arg declared_type='id' type='@' index='0' name='user'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='callbackFailedToUsers'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='callbackReadyToUsers'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelLoading'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='clearLoadingState'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='goFromLoadedToReady'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='initWithOid:url:objManager:'>
+<arg declared_type='id' type='@' index='0' name='oid_'/>
+<arg declared_type='NSURL*' type='@' index='1' name='url_'/>
+<arg declared_type='id' type='@' index='2' name='objManager_'/>
+<retval declared_type='HJMOHandler*' type='@'/>
+</method>
+<method selector='isInUse'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isLoading'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isReady'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='managedObj'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='moData'>
+<retval declared_type='NSData*' type='@'/>
+</method>
+<method selector='moLoadingDataFile'>
+<retval declared_type='NSFileHandle*' type='@'/>
+</method>
+<method selector='moReadyDataFilename'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='objManager'>
+<retval declared_type='HJObjManager*' type='@'/>
+</method>
+<method selector='oid'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='ownPolicy'>
+<retval declared_type='HJMOPolicy*' type='@'/>
+</method>
+<method selector='removeUser:'>
+<arg declared_type='id' type='@' index='0' name='mo'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setManagedObj:'>
+<arg declared_type='id' type='@' index='0' name='managedObj'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMoData:'>
+<arg declared_type='NSData*' type='@' index='0' name='moData'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMoLoadingDataFile:'>
+<arg declared_type='NSFileHandle*' type='@' index='0' name='moLoadingDataFile'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMoReadyDataFilename:'>
+<arg declared_type='NSString*' type='@' index='0' name='moReadyDataFilename'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setObjManager:'>
+<arg declared_type='HJObjManager*' type='@' index='0' name='objManager'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOwnPolicy:'>
+<arg declared_type='HJMOPolicy*' type='@' index='0' name='ownPolicy'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrlConn:'>
+<arg declared_type='NSURLConnection*' type='@' index='0' name='urlConn'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDownloadingFromURL'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='enum HJMOState' type='i'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+<method selector='urlConn'>
+<retval declared_type='NSURLConnection*' type='@'/>
+</method>
+</class>
+<class name='HJMOPolicy'>
+<method selector='readsUpdateFileDate'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setReadsUpdateFileDate:'>
+<arg declared_type='BOOL' type='B' index='0' name='readsUpdateFileDate'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrlTimeoutTime:'>
+<arg declared_type='NSTimeInterval' type='d' index='0' name='urlTimeoutTime'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='smallImgFastScrollLRUCachePolicy'>
+<retval declared_type='HJMOPolicy*' type='@'/>
+</method>
+<method selector='urlTimeoutTime'>
+<retval declared_type='NSTimeInterval' type='d'/>
+</method>
+</class>
+<class name='HJManagedImageV'>
+<method selector='callbackOnCancel'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='callbackOnSetImage'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='clear'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='image'>
+<retval declared_type='int*' type='^i'/>
+</method>
+<method selector='imageView'>
+<retval declared_type='int*' type='^i'/>
+</method>
+<method selector='index'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='loadingWheel'>
+<retval declared_type='int*' type='^i'/>
+</method>
+<method selector='markCancelled'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='modification'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='modifyImage:modification:'>
+<arg declared_type='id' type='@' index='0' name='theImage'/>
+<arg declared_type='int' type='i' index='1' name='mod'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setCallbackOnCancel:'>
+<arg declared_type='id' type='@' index='0' name='callbackOnCancel'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCallbackOnImageTap:method:'>
+<arg declared_type='id' type='@' index='0' name='obj'/>
+<arg declared_type='SEL' type=':' index='1' name='m'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setCallbackOnSetImage:'>
+<arg declared_type='id' type='@' index='0' name='callbackOnSetImage'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:'>
+<arg declared_type='int*' type='^i' index='0' name='image'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImage:modification:'>
+<arg declared_type='id' type='@' index='0' name='theImage'/>
+<arg declared_type='int' type='i' index='1' name='mod'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setImageView:'>
+<arg declared_type='int*' type='^i' index='0' name='imageView'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setIndex:'>
+<arg declared_type='int' type='i' index='0' name='index'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLoadingWheel:'>
+<arg declared_type='int*' type='^i' index='0' name='loadingWheel'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setModification:'>
+<arg declared_type='int' type='i' index='0' name='modification'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showLoadingWheel'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HJObjManager'>
+<method selector='addHandlerToMemCache:'>
+<arg declared_type='HJMOHandler*' type='@' index='0' name='handler'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='cancelLoadingObjects'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fileCache'>
+<retval declared_type='HJMOFileCache*' type='@'/>
+</method>
+<method selector='handlerFinishedDownloading:'>
+<arg declared_type='HJMOHandler*' type='@' index='0' name='handler'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='init'>
+<retval declared_type='HJObjManager*' type='@'/>
+</method>
+<method selector='initWithLoadingBufferSize:memCacheSize:'>
+<arg declared_type='int' type='i' index='0' name='loadingBufferSize'/>
+<arg declared_type='int' type='i' index='1' name='memCacheSize'/>
+<retval declared_type='HJObjManager*' type='@'/>
+</method>
+<method selector='loadingHandlers'>
+<retval declared_type='HJCircularBuffer*' type='@'/>
+</method>
+<method selector='manage:'>
+<arg declared_type='id' type='@' index='0' name='user'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='memCache'>
+<retval declared_type='HJCircularBuffer*' type='@'/>
+</method>
+<method selector='policy'>
+<retval declared_type='HJMOPolicy*' type='@'/>
+</method>
+<method selector='removeFromHandlerFromCaches:'>
+<arg declared_type='HJMOHandler*' type='@' index='0' name='handler'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='resetLoadingBufferToSize:'>
+<arg declared_type='int' type='i' index='0' name='loadingBufferSize'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setFileCache:'>
+<arg declared_type='HJMOFileCache*' type='@' index='0' name='fileCache'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLoadingHandlers:'>
+<arg declared_type='HJCircularBuffer*' type='@' index='0' name='loadingHandlers'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMemCache:'>
+<arg declared_type='HJCircularBuffer*' type='@' index='0' name='memCache'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPolicy:'>
+<arg declared_type='HJMOPolicy*' type='@' index='0' name='policy'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HJWeakMutableArray'>
+<method selector='addObject:'>
+<arg declared_type='id' type='@' index='0' name='anObject'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method class_method='true' selector='arrayWithCapacity:'>
+<arg declared_type='int' type='i' index='0' name='capacity'/>
+<retval declared_type='HJWeakMutableArray*' type='@'/>
+</method>
+<method selector='count'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='findObject:'>
+<arg declared_type='id' type='@' index='0' name='obj'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithCapacity:'>
+<arg declared_type='int' type='i' index='0' name='capacity'/>
+<retval declared_type='HJWeakMutableArray*' type='@'/>
+</method>
+<method selector='objectAtIndex:'>
+<arg declared_type='int' type='i' index='0' name='i'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='objectEnumerator'>
+<retval declared_type='NSEnumerator*' type='@'/>
+</method>
+<method selector='removeObject:'>
+<arg declared_type='id' type='@' index='0' name='obj'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='HJWeakMutableArrayEnumerator'>
+<method selector='initWithInternalArray:'>
+<arg declared_type='NSArray*' type='@' index='0' name='array'/>
+<retval declared_type='HJWeakMutableArrayEnumerator*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='changeManagedObjStateFromLoadedToReady'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='managedImageCancelled:'>
+<arg declared_type='HJManagedImageV*' type='@' index='0' name='mi'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='managedImageSet:'>
+<arg declared_type='HJManagedImageV*' type='@' index='0' name='mi'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='managedObjFailed'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='managedObjReady'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='moHandler'>
+<retval declared_type='HJMOHandler*' type='@'/>
+</method>
+<method selector='oid'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setMoHandler:'>
+<arg declared_type='HJMOHandler*' type='@' index='0' name='moHandler'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUrl:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</class>
+<informal_protocol name='HJMOUser'>
+<method type='v8@0:4' selector='changeManagedObjStateFromLoadedToReady'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v8@0:4' selector='managedObjFailed'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v8@0:4' selector='managedObjReady'>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@8@0:4' selector='moHandler'>
+<retval declared_type='HJMOHandler*' type='@'/>
+</method>
+<method type='@8@0:4' selector='oid'>
+<retval declared_type='id' type='@'/>
+</method>
+<method type='v12@0:4@8' selector='setMoHandler:'>
+<arg declared_type='HJMOHandler*' type='@' index='0' name='moHandler'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='setOid:'>
+<arg declared_type='id' type='@' index='0' name='oid'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='setUrl:'>
+<arg declared_type='NSURL*' type='@' index='0' name='url'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='@8@0:4' selector='url'>
+<retval declared_type='NSURL*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='HJManagedImageVDelegate'>
+<method type='v12@0:4@8' selector='managedImageCancelled:'>
+<arg declared_type='HJManagedImageV*' type='@' index='0' name='mi'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='managedImageSet:'>
+<arg declared_type='HJManagedImageV*' type='@' index='0' name='mi'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>

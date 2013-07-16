@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<string_constant nsstring='true' name='kReachabilityChangedNotification' value='kNetworkReachabilityChangedNotification'/>
+<enum name='NotReachable' value='0'/>
+<enum name='ReachableViaWWAN' value='2'/>
+<enum name='ReachableViaWiFi' value='1'/>
+<class name='Reachability'>
+<method selector='connectionRequired'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='currentReachabilityStatus'>
+<retval type='i' declared_type='NetworkStatus'/>
+</method>
+<method selector='reachabilityForInternetConnection' class_method='true'>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='reachabilityForLocalWiFi' class_method='true'>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='reachabilityWithAddress:' class_method='true'>
+<arg const='true' type='^{sockaddr_in=}' index='0' name='hostAddress' declared_type='struct sockaddr_in*'/>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='reachabilityWithHostName:' class_method='true'>
+<arg type='@' index='0' name='hostName' declared_type='NSString*'/>
+<retval type='@' declared_type='Reachability*'/>
+</method>
+<method selector='startNotifier'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='stopNotifier'>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+</signatures>
