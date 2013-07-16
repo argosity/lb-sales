@@ -1,0 +1,97 @@
+GIT
+  remote: https://github.com/tkadauke/motion-resource.git
+  revision: 56b99700412034a3bac032cd3c4462608acdc0c5
+  specs:
+    motion-resource (0.1.3)
+      bubble-wrap
+      motion-support (>= 0.2.3)
+
+PATH
+  remote: ../BubbleWrap
+  specs:
+    bubble-wrap (1.3.0)
+
+PATH
+  remote: ../motion-support
+  specs:
+    motion-support (0.2.4)
+      motion-require (>= 0.0.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
+      multi_json (~> 1.0)
+    claide (0.3.2)
+    cocoapods (0.22.2)
+      activesupport (~> 3.2.13)
+      claide (~> 0.3.2)
+      cocoapods-core (= 0.22.2)
+      cocoapods-downloader (~> 0.1.1)
+      colored (~> 1.2)
+      escape (~> 0.0.4)
+      json (~> 1.8.0)
+      open4 (~> 1.3.0)
+      xcodeproj (~> 0.8.1)
+    cocoapods-core (0.22.2)
+      activesupport (~> 3.2.13)
+      json (~> 1.8.0)
+      nap (~> 0.5.1)
+    cocoapods-downloader (0.1.1)
+    colored (1.2)
+    deep_merge (1.0.0)
+    escape (0.0.4)
+    formotion (1.3.1)
+      bubble-wrap (>= 1.1.4)
+      motion-require (~> 0.0.3)
+    i18n (0.6.1)
+    i18n_tools (0.1.5)
+      deep_merge
+      ya2yaml
+    json (1.8.0)
+    motion-bundler (0.2.1)
+      thor
+    motion-cocoapods (1.3.4)
+      cocoapods (>= 0.17.0)
+    motion-devices (0.0.2)
+    motion-i18n (0.0.2)
+      i18n
+      motion-require
+    motion-require (0.0.7)
+    motion-stump (0.3.0)
+    motion-testflight (1.5)
+    motion-yaml (1.0)
+    multi_json (1.7.4)
+    nap (0.5.1)
+    open4 (1.3.0)
+    rake (10.1.0)
+    teacup (2.1.1)
+    thor (0.18.1)
+    webstub (0.6.1)
+    xcodeproj (0.8.1)
+      activesupport (~> 3.2.13)
+      colored (~> 1.2)
+    ya2yaml (0.31)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bubble-wrap!
+  formotion
+  i18n_tools
+  json
+  motion-bundler
+  motion-cocoapods (= 1.3.4)
+  motion-devices
+  motion-i18n
+  motion-resource!
+  motion-stump
+  motion-support!
+  motion-testflight
+  motion-yaml
+  multi_json (= 1.7.4)
+  rake
+  teacup
+  webstub

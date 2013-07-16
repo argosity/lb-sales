@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='TVNavigationController'>
+<method selector='fakeRootViewController'>
+<retval type='^i' declared_type='int*'/>
+</method>
+<method selector='setFakeRootViewController:'>
+<arg index='0' name='fakeRootViewController' type='^i' declared_type='int*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRootViewController:'>
+<arg index='0' name='rootViewController' type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+</signatures>

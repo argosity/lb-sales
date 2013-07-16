@@ -1,0 +1,224 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='PCLineChartView'>
+<method selector='autoscaleYAxis'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='components'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='interval'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='legendFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='maxValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='minValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='numXIntervals'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='numYIntervals'>
+<retval declared_type='NSUInteger' type='I'/>
+</method>
+<method selector='setAutoscaleYAxis:'>
+<arg index='0' name='autoscaleYAxis' declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setComponents:'>
+<arg index='0' name='components' declared_type='NSMutableArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setInterval:'>
+<arg index='0' name='interval' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLegendFont:'>
+<arg index='0' name='legendFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaxValue:'>
+<arg index='0' name='maxValue' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinValue:'>
+<arg index='0' name='minValue' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumXIntervals:'>
+<arg index='0' name='numXIntervals' declared_type='NSUInteger' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setNumYIntervals:'>
+<arg index='0' name='numYIntervals' declared_type='NSUInteger' type='I'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValueLabelFont:'>
+<arg index='0' name='valueLabelFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setXLabelFont:'>
+<arg index='0' name='xLabelFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setXLabels:'>
+<arg index='0' name='xLabels' declared_type='NSMutableArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setYLabelFont:'>
+<arg index='0' name='yLabelFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='valueLabelFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='xLabelFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='xLabels'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='yLabelFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+</class>
+<class name='PCLineChartViewComponent'>
+<method selector='colour'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='labelFormat'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='points'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='setColour:'>
+<arg index='0' name='colour' declared_type='UIColor*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLabelFormat:'>
+<arg index='0' name='labelFormat' declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPoints:'>
+<arg index='0' name='points' declared_type='NSArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShouldLabelValues:'>
+<arg index='0' name='shouldLabelValues' declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg index='0' name='title' declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='shouldLabelValues'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</class>
+<class name='PCPieChart'>
+<method selector='components'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='diameter'>
+<retval declared_type='int' type='i'/>
+</method>
+<method selector='hasOutline'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='percentageFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+<method selector='sameColorLabel'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setComponents:'>
+<arg index='0' name='components' declared_type='NSMutableArray*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDiameter:'>
+<arg index='0' name='diameter' declared_type='int' type='i'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOutline:'>
+<arg index='0' name='outline' declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPercentageFont:'>
+<arg index='0' name='percentageFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSameColorLabel:'>
+<arg index='0' name='sameColorLabel' declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setShowArrow:'>
+<arg index='0' name='showArrow' declared_type='BOOL' type='B'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleFont:'>
+<arg index='0' name='titleFont' declared_type='UIFont*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='showArrow'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='titleFont'>
+<retval declared_type='UIFont*' type='@'/>
+</method>
+</class>
+<class name='PCPieComponent'>
+<method selector='colour'>
+<retval declared_type='UIColor*' type='@'/>
+</method>
+<method selector='endDeg'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='initWithTitle:value:'>
+<arg index='0' name='title' declared_type='NSString*' type='@'/>
+<arg index='1' name='value' declared_type='float' type='f'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='pieComponentWithTitle:value:' class_method='true'>
+<arg index='0' name='title' declared_type='NSString*' type='@'/>
+<arg index='1' name='value' declared_type='float' type='f'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setColour:'>
+<arg index='0' name='colour' declared_type='UIColor*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEndDeg:'>
+<arg index='0' name='endDeg' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStartDeg:'>
+<arg index='0' name='startDeg' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:'>
+<arg index='0' name='title' declared_type='NSString*' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg index='0' name='value' declared_type='float' type='f'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='startDeg'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+</signatures>

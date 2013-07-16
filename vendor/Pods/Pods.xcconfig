@@ -1,0 +1,8 @@
+#include "Pods-NSData+MD5Digest.xcconfig"
+#include "Pods-SDWebImage.xcconfig"
+#include "Pods-ViewDeck.xcconfig"
+#include "Pods-libwebp.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/NSData+MD5Digest" "${PODS_ROOT}/Headers/SDWebImage" "${PODS_ROOT}/Headers/ViewDeck" "${PODS_ROOT}/Headers/libwebp" "${PODS_ROOT}/Headers/libwebp/webp"
+OTHER_LDFLAGS = -ObjC ${PODS_SDWEBIMAGE_OTHER_LDFLAGS} ${PODS_VIEWDECK_OTHER_LDFLAGS}
+PODS_ROOT = ${SRCROOT}/Pods

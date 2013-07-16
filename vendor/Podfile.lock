@@ -1,0 +1,30 @@
+PODS:
+  - libwebp (0.3.0-rc7):
+    - libwebp/dec
+    - libwebp/dsp
+    - libwebp/utils
+    - libwebp/webp
+  - libwebp/dec (0.3.0-rc7)
+  - libwebp/dsp (0.3.0-rc7)
+  - libwebp/utils (0.3.0-rc7)
+  - libwebp/webp (0.3.0-rc7)
+  - NSData+MD5Digest (1.0.0)
+  - SDWebImage (3.3):
+    - libwebp
+    - SDWebImage/MapKit
+  - SDWebImage/MapKit (3.3):
+    - libwebp
+  - ViewDeck (2.3.1)
+
+DEPENDENCIES:
+  - NSData+MD5Digest
+  - SDWebImage
+  - ViewDeck
+
+SPEC CHECKSUMS:
+  libwebp: 40517fa1fd3716eded73b4696c45fc0b66e4b414
+  NSData+MD5Digest: 8275479b2a935e6caa8a92a9a814fb5abecba367
+  SDWebImage: 79a8bac9ccf85b269100b294f7b43684dab8bf8a
+  ViewDeck: 2cdc67c4b41a10cafc7556b982f028409e33604d
+
+COCOAPODS: 0.22.1
