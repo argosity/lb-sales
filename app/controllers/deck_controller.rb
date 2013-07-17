@@ -4,7 +4,7 @@ class DeckController < IIViewDeckController
         super
         self.leftController   = ::MenuViewController.alloc.init
         self.centerController = ::NavigationController.alloc.init
-
+        self.leftSize = 160
         self.panningMode = IIViewDeckNavigationBarPanning
 
         self.centerhiddenInteractivity = IIViewDeckCenterHiddenNotUserInteractiveWithTapToClose

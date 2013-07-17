@@ -21,7 +21,7 @@ Motion::Project::App.setup do |app|
         ["./app/models/ledger_buddy_model.rb"] +
         Dir.glob("./app/**/*.rb")
 
-    #app.vendor_project('vendor/iOSPlot', :static)
+
     app.vendor_project('vendor/Reachability', :static)
     app.vendor_project('vendor/TVNavigationController', :static)
     app.vendor_project('vendor/iCarousel', :static)
@@ -31,10 +31,7 @@ Motion::Project::App.setup do |app|
 
     app.frameworks = %w{ MapKit ImageIO QuartzCore }
 
-
     app.pods do
-#        pod 'iCarousel'
-
         pod 'NSData+MD5Digest'
         pod 'ViewDeck'
         pod 'SDWebImage'
@@ -44,10 +41,10 @@ end
 
 # Track and specify files and their mutual dependencies within the :motion
 # Bundler group
-MotionBundler.setup do |app|
+#MotionBundler.setup do |app|
 #    app.require "hashie/mash"
 #    app.require 'set'
-end
+#end
 
 
 task :resources do

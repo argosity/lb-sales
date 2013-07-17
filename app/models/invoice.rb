@@ -37,6 +37,12 @@ class Invoice < LedgerBuddyModel
         super
     end
 
+    def valid?
+        self.errors.add( :location, "can't be blank" ) unless location_id.present?
+        self.errors.add( :customer, "can't be blank" ) unless customer_id.present?
+        return super
+    end
+
     def tax_line
         @tax ||= Sku.tax
         self.lines.select{ |l| @tax.code == l.sku.code }.first

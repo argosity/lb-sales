@@ -24,6 +24,7 @@ class Sku < LedgerBuddyModel
                 @tax = sku
                 block.call( @tax ) if block
             end
+            nil
         end
     end
 

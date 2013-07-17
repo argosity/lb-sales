@@ -14,11 +14,12 @@ class InvoiceViewController < UIViewController
         @table.dataSource = self
 
         @charges = subview(UIView, :charges) do
-            @save =  subview( UIButton.buttonWithType( UIButtonTypeRoundedRect ), :save_btn )
+            @save = subview( UIButton.buttonWithType( UIButtonTypeRoundedRect ), :save_btn )
             @save.addTarget(self,action:'saveInvoice:', forControlEvents:UIControlEventTouchUpInside)
 
             subview(UILabel,:tax_label)
             @tax   = subview(UILabel,:tax)
+
             subview(UILabel,:total_label)
             @total = subview(UILabel,:total)
         end
@@ -46,7 +47,11 @@ class InvoiceViewController < UIViewController
     end
 
     def saveInvoice( *args )
-        Invoice.logger = MotionSupport::StdoutLogger.new
+        unless @invoice.valid?
+            SVProgressHUD.showErrorWithStatus("Please fill in Customer & Location in settings")
+            return
+        end
+
         @invoice.save(:include=>['lines_attributes']) do | inv, json |
             @invoice.list
             list = @invoice.list
@@ -60,12 +65,6 @@ class InvoiceViewController < UIViewController
 
     def itemInformationViewController
         @itemInfo  ||= ItemInformationViewController.alloc.init
-    end
-
-    def save
-        unless @invoice.valid?
-            SVProgressHUD.showErrorWithStatus("Please fill in Customer & Location in settings")
-        end
     end
 
     def skuWasSelected(sku)

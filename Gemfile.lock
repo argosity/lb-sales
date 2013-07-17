@@ -1,28 +1,10 @@
-GIT
-  remote: https://github.com/tkadauke/motion-resource.git
-  revision: 56b99700412034a3bac032cd3c4462608acdc0c5
-  specs:
-    motion-resource (0.1.3)
-      bubble-wrap
-      motion-support (>= 0.2.3)
-
-PATH
-  remote: ../BubbleWrap
-  specs:
-    bubble-wrap (1.3.0)
-
-PATH
-  remote: ../motion-support
-  specs:
-    motion-support (0.2.4)
-      motion-require (>= 0.0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    bubble-wrap (1.3.0)
     claide (0.3.2)
     cocoapods (0.22.2)
       activesupport (~> 3.2.13)
@@ -59,7 +41,12 @@ GEM
       i18n
       motion-require
     motion-require (0.0.7)
+    motion-resource (0.1.4)
+      bubble-wrap
+      motion-support (>= 0.2.3)
     motion-stump (0.3.0)
+    motion-support (0.2.4)
+      motion-require (>= 0.0.6)
     motion-testflight (1.5)
     motion-yaml (1.0)
     multi_json (1.7.4)
@@ -78,7 +65,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bubble-wrap!
+  bubble-wrap
   formotion
   i18n_tools
   json
@@ -86,9 +73,9 @@ DEPENDENCIES
   motion-cocoapods (= 1.3.4)
   motion-devices
   motion-i18n
-  motion-resource!
+  motion-resource
   motion-stump
-  motion-support!
+  motion-support
   motion-testflight
   motion-yaml
   multi_json (= 1.7.4)
