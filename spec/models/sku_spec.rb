@@ -1,8 +1,6 @@
-#require 'spec_helper'
-
 describe Sku do
-    extend WebStub::SpecHelpers
-    extend MotionResource::SpecHelpers
+
+    extend LB::SpecHelper
 
     it "should extract attributes" do
         sku = Sku.new( :code => 'TEST' )
@@ -10,7 +8,8 @@ describe Sku do
     end
 
     it "should find single record" do
-        stub_request(:get, "http://test.ledgerbuddy.dev/api/skus/10.json").to_return(json: { id: 10 })
+
+        stub_request(:get, spec_url('skus/10') ).to_return(json: { id: 10 })
         Sku.find(10) do |result|
             @result = result
             resume
@@ -22,8 +21,8 @@ describe Sku do
     end
 
     it "searches skus" do
-        stub_request(:get, "http://test.ledgerbuddy.dev/api/skus.json?query%5Bcode%5D=TEST").
-            to_return( :json=> { data: [{ id: 10, code: 'TEST'}] } )
+        stub_request( :get, spec_url('skus',{query: {code: 'TEST'}}) )
+            .to_return( :json=> { data: [{ id: 10, code: 'TEST'}] } )
 
         Sku.find_all( { :query => {:code => 'TEST'} } ) do |skus,result|
             @skus = skus
@@ -37,8 +36,8 @@ describe Sku do
     end
 
     it "includes images" do
-        stub_request(:get, "http://test.ledgerbuddy.dev/api/skus.json?include%5B%5D=images&query%5Bcode%5D=TEST").
-            to_return( :json=> { data: [{ id: 10, code: 'TEST',images:[{:id=>1}]}] } )
+        stub_request(:get, spec_url('skus', :include=>['images'],:query=>{:code=>'TEST'}) )
+            .to_return( :json=> { data: [{ id: 10, code: 'TEST',images:[{:id=>1}]}] } )
 
         Sku.find_all( { :query => {:code => 'TEST'}, :include=>[:images] } ) do |skus,result|
             @skus = skus

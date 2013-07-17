@@ -15,3 +15,5 @@ resources/*.momd
 resources/*.storyboardc
 *.o
 *.a
+*.pch
+spec/auth.yml
